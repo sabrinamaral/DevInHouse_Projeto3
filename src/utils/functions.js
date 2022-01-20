@@ -1,10 +1,10 @@
 const fileSystem = require("fs");
 
-function getUsersFunc() {
-  const allUsers = JSON.parse(
-    fileSystem.readFileSync("src/database/user.json", "utf8")
+function getJsonData(fileName) {
+  const allData = JSON.parse(
+    fileSystem.readFileSync("src/database/" + fileName, "utf8")
   );
-  return allUsers;
+  return allData;
 }
 
 function createUpdateUser(fileName, data) {
@@ -12,6 +12,6 @@ function createUpdateUser(fileName, data) {
 }
 
 module.exports = {
-  getUsersFunc,
+  getJsonData,
   createUpdateUser,
 };

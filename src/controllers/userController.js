@@ -1,8 +1,8 @@
 const req = require("express/lib/request");
 const fileSystem = require("fs");
-const { getUsersFunc, createUpdateUser } = require("../utils/functions");
+const { createUpdateUser, getJsonData } = require("../utils/functions");
 
-const users = getUsersFunc();
+const users = getJsonData("user.json");
 
 module.exports = {
   async createUser(req, res) {
