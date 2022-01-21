@@ -1,66 +1,71 @@
 [
-  { "idSheet": 1 },
   {
-    "idEntry": 1642701918395,
-    "price": 50,
-    "typeOfExpenses": "petrol",
-    "date": "2022-01-05T00:00:00.000Z",
-    "name": "DB Fuel Station"
-  },
-  {
-    "idEntry": 1642701918397,
-    "price": 30,
-    "typeOfExpenses": "eating out",
-    "date": "2022-01-10T00:00:00.000Z",
-    "name": "Oliver Restaurant"
-  },
-  {
-    "idEntry": 1642701918397,
-    "price": 50,
-    "typeOfExpenses": "groceries",
-    "date": "2022-01-12T00:00:00.000Z",
-    "name": "Green Market"
-  },
-  {
-    "idEntry": 1642701918397,
-    "price": 100,
-    "typeOfExpenses": "petrol",
-    "date": "2022-01-20T00:00:00.000Z",
-    "name": "DB Fuel Station"
-  },
-  {
-    "idEntry": 1642701918397,
-    "price": 15,
-    "typeOfExpenses": "eating out",
-    "date": "2022-01-20T00:00:00.000Z",
-    "name": "Jay Juice"
-  },
-  {
-    "idEntry": 1642701918397,
-    "price": 45,
-    "typeOfExpenses": "groceries",
-    "date": "2022-01-20T00:00:00.000Z",
-    "name": "Fruit Market"
-  },
-  {
-    "idEntry": 1642701918397,
-    "price": 1500,
-    "typeOfExpenses": "rent",
-    "date": "2022-01-25T00:00:00.000Z",
-    "name": "ABC Real Estate"
-  },
-  {
-    "idEntry": 1642701918398,
-    "price": 100,
-    "typeOfExpenses": "gym",
-    "date": "2022-01-25T00:00:00.000Z",
-    "name": "Quick Fitness"
-  },
-  {
-    "idEntry": 1642701918398,
-    "price": 13,
-    "typeOfExpenses": "groceries",
-    "date": "2022-01-28T00:00:00.000Z",
-    "name": "Hot Bread Bakery"
+    "id": 1,
+    "userID": 1,
+    "financialData": [
+      {
+        "idEntry": 1,
+        "price": 50,
+        "typeOfExpenses": "petrol",
+        "date": "2022-01-05T00:00:00.000Z",
+        "name": "DB Fuel Station"
+      },
+      {
+        "idEntry": 2,
+        "price": 30,
+        "typeOfExpenses": "eating out",
+        "date": "2022-01-10T00:00:00.000Z",
+        "name": "Oliver Restaurant"
+      },
+      {
+        "idEntry": 3,
+        "price": 50,
+        "typeOfExpenses": "groceries",
+        "date": "2022-01-12T00:00:00.000Z",
+        "name": "Green Market"
+      },
+      {
+        "idEntry": 4,
+        "price": 100,
+        "typeOfExpenses": "petrol",
+        "date": "2022-01-20T00:00:00.000Z",
+        "name": "DB Fuel Station"
+      },
+      {
+        "idEntry": 5,
+        "price": 15,
+        "typeOfExpenses": "eating out",
+        "date": "2022-01-20T00:00:00.000Z",
+        "name": "Jay Juice"
+      },
+      {
+        "idEntry": 6,
+        "price": 45,
+        "typeOfExpenses": "groceries",
+        "date": "2022-01-20T00:00:00.000Z",
+        "name": "Fruit Market"
+      },
+      {
+        "idEntry": 7,
+        "price": 1500,
+        "typeOfExpenses": "rent",
+        "date": "2022-01-25T00:00:00.000Z",
+        "name": "ABC Real Estate"
+      },
+      {
+        "idEntry": 8,
+        "price": 100,
+        "typeOfExpenses": "gym",
+        "date": "2022-01-25T00:00:00.000Z",
+        "name": "Quick Fitness"
+      },
+      {
+        "idEntry": 9,
+        "price": 13,
+        "typeOfExpenses": "groceries",
+        "date": "2022-01-28T00:00:00.000Z",
+        "name": "Hot Bread Bakery"
+      }
+    ]
   }
 ]
