@@ -7,7 +7,7 @@ const upload = multer();
 const financeController = require("../../controllers/financeController");
 
 financeRouter.post(
-  "/finance/:id",
+  "/finance/:userID",
   upload.single("file"),
   financeController.importFromXLS
 );
