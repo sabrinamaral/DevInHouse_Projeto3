@@ -14,10 +14,9 @@ module.exports = {
         message: "Please, fill all the information required.",
       });
     }
-    const id = users.length + 1;
+    const userID = users.length + 1;
     const newUsers = [];
-    newUsers.push(...users, { id, name, email });
-
+    newUsers.push(...users, { userID, name, email });
     createUpdateUser("user.json", newUsers);
 
     return res
@@ -28,11 +27,11 @@ module.exports = {
   async getUser(req, res) {
     const { id } = req.params;
 
-    const singleUser = users.find((user) => user.id === Number(id));
+    const singleUser = users.find((user) => user.userID === Number(id));
     if (!singleUser) {
       return res
         .status(404)
-        .send({ success: false, message: `No user with id ${id}` });
+        .send({ success: false, message: `No user with id ${userID}` });
     }
     return res.status(200).send({ success: true, users: singleUser });
   },
@@ -41,7 +40,7 @@ module.exports = {
     const { id } = req.params;
     const { name, email } = req.body;
 
-    const singleUser = await users.find((user) => user.id === Number(id));
+    const singleUser = await users.find((user) => user.userID === Number(id));
     if (!singleUser) {
       return res.status(404).send({
         success: false,
@@ -51,7 +50,7 @@ module.exports = {
     }
 
     const userUpdated = users.map((user) => {
-      if (user.id === Number(id)) {
+      if (user.userID === Number(id)) {
         user.name = name;
         user.email = email;
       }
