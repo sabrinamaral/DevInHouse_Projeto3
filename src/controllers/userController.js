@@ -1,6 +1,6 @@
 const req = require("express/lib/request");
 const fileSystem = require("fs");
-const { createUpdateUser, getJsonData } = require("../utils/functions");
+const { createUpdateData, getJsonData } = require("../utils/functions");
 
 const users = getJsonData("user.json");
 
@@ -17,7 +17,7 @@ module.exports = {
     const userID = users.length + 1;
     const newUsers = [];
     newUsers.push(...users, { userID, name, email });
-    createUpdateUser("user.json", newUsers);
+    createUpdateData("user.json", newUsers);
 
     return res
       .status(200)
@@ -57,7 +57,7 @@ module.exports = {
       return user;
     });
 
-    createUpdateUser("user.json", userUpdated);
+    createUpdateData("user.json", userUpdated);
 
     return res.status(200).send({
       success: true,

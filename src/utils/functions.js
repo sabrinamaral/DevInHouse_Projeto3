@@ -1,17 +1,20 @@
 const fileSystem = require("fs");
 
-function getJsonData(fileName) {
+const getJsonData = async (fileName) => {
   const allData = JSON.parse(
-    fileSystem.readFileSync("src/database/" + fileName, "utf8")
+    await fileSystem.readFileSync("src/database/" + fileName, "utf8")
   );
   return allData;
-}
+};
 
-function createUpdateUser(fileName, data) {
-  fileSystem.writeFileSync("src/database/" + fileName, JSON.stringify(data));
-}
+const createUpdateData = async (fileName, data) => {
+  await fileSystem.writeFileSync(
+    "src/database/" + fileName,
+    JSON.stringify(data)
+  );
+};
 
 module.exports = {
   getJsonData,
-  createUpdateUser,
+  createUpdateData,
 };
