@@ -1,1 +1,111 @@
-[]
+[
+  {
+    "id": 1,
+    "userID": 9,
+    "financialData": [
+      {
+        "entryID": 1,
+        "price": 25,
+        "typeOfExpenses": "petrol",
+        "date": "2022-02-05T00:00:00.000Z",
+        "name": "DB Fuel Station"
+      },
+      {
+        "entryID": 2,
+        "price": 5,
+        "typeOfExpenses": "eating out",
+        "date": "2022-02-10T00:00:00.000Z",
+        "name": "Coffee Cafe"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "userID": 3,
+    "financialData": [
+      {
+        "entryID": 1,
+        "price": 25,
+        "typeOfExpenses": "petrol",
+        "date": "2022-02-05T00:00:00.000Z",
+        "name": "DB Fuel Station"
+      },
+      {
+        "entryID": 2,
+        "price": 5,
+        "typeOfExpenses": "eating out",
+        "date": "2022-02-10T00:00:00.000Z",
+        "name": "Coffee Cafe"
+      },
+      {
+        "entryID": 3,
+        "price": 30,
+        "typeOfExpenses": "groceries",
+        "date": "2022-02-15T00:00:00.000Z",
+        "name": "Fruits Market"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "userID": 7,
+    "financialData": [
+      {
+        "entryID": 2,
+        "price": 5,
+        "typeOfExpenses": "eating out",
+        "date": "2022-02-10T00:00:00.000Z",
+        "name": "Coffee Cafe"
+      },
+      {
+        "entryID": 3,
+        "price": 30,
+        "typeOfExpenses": "groceries",
+        "date": "2022-02-15T00:00:00.000Z",
+        "name": "Fruits Market"
+      },
+      {
+        "entryID": 4,
+        "price": 25,
+        "typeOfExpenses": "petrol",
+        "date": "2022-02-05T00:00:00.000Z",
+        "name": "DB Fuel Station"
+      },
+      {
+        "entryID": 5,
+        "price": 5,
+        "typeOfExpenses": "eating out",
+        "date": "2022-02-10T00:00:00.000Z",
+        "name": "Coffee Cafe"
+      },
+      {
+        "entryID": 6,
+        "price": 30,
+        "typeOfExpenses": "groceries",
+        "date": "2022-02-15T00:00:00.000Z",
+        "name": "Fruits Market"
+      },
+      {
+        "entryID": 7,
+        "price": 25,
+        "typeOfExpenses": "petrol",
+        "date": "2022-02-05T00:00:00.000Z",
+        "name": "DB Fuel Station"
+      },
+      {
+        "entryID": 8,
+        "price": 5,
+        "typeOfExpenses": "eating out",
+        "date": "2022-02-10T00:00:00.000Z",
+        "name": "Coffee Cafe"
+      },
+      {
+        "entryID": 9,
+        "price": 30,
+        "typeOfExpenses": "groceries",
+        "date": "2022-02-15T00:00:00.000Z",
+        "name": "Fruits Market"
+      }
+    ]
+  }
+]

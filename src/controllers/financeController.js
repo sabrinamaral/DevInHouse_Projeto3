@@ -65,12 +65,19 @@ module.exports = {
       );
       // if there is NO user in transactions, create the template
       // take the userID from the users list and the financialData from the newData (worksheet) created above
+
       if (!userTransactions) {
         userTransactions = {
           id: transactions.length + 1,
           userID: existUser.userID,
-          financialData: newData,
+          financialData: newData.map((item, index) => {
+            return {
+              entryID: index + 1,
+              ...item,
+            };
+          }),
         };
+
         // insert the userTransactions object above into the transactions array and then in the finance JSON
         transactions.push(userTransactions);
         await createUpdateData("finance.json", transactions);
@@ -81,7 +88,6 @@ module.exports = {
           ...userTransactions.financialData,
           ...newData.map((item, index) => {
             return {
-              // assembly the object again
               entryID: userTransactions.financialData.length + index + 1,
               ...item,
             };
@@ -112,6 +118,7 @@ module.exports = {
           }),
         ],
       };
+      // update JSON
       transactions.push(userTransactions);
       await createUpdateData("finance.json", transactions);
     }
@@ -121,5 +128,57 @@ module.exports = {
       message: `Success! Entry registered.`,
       data: transactions,
     });
+  },
+  async deleteTransaction(req, res) {
+    // get data from JSON
+    const transactions = await getJsonData("finance.json");
+    const users = await getJsonData("user.json");
+    // get info from params
+    const { userID, entryID } = req.params;
+
+    // verifying if there is the user
+    const existUser = users.find((user) => user.userID === Number(userID));
+    // if there is no user, send a 404 error
+    if (!existUser) {
+      return res
+        .status(404)
+        .send({ success: false, message: `User not found.` });
+    }
+
+    const idUserTransaction = transactions.map(
+      (transaction) => transaction.userID
+    );
+
+    const userFound = idUserTransaction.find(
+      (item) => item === existUser.userID
+    );
+
+    if (!userFound) {
+      return res.status(404).send({
+        success: "false",
+        message: "there is no transaction for this user.",
+      });
+    }
+
+    let transaction = transactions.find((t) => t.userID === userFound);
+
+    const toBeDeleted = transaction.financialData.find(
+      (i) => i.entryID === Number(entryID)
+    );
+
+    const positionToDelete = transaction.financialData.findIndex(
+      (transaction) => transaction.entryID === Number(entryID)
+    );
+
+    transaction = transaction.financialData.splice(positionToDelete, 1);
+
+    if (positionToDelete === -1) {
+      return res
+        .status(404)
+        .send({ success: false, message: `This transaction doesn't exist.` });
+    }
+    createUpdateData("finance.json", transactions);
+
+    return res.status(200).send({ data: transactions });
   },
 };
