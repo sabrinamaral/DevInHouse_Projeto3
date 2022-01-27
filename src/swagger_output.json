@@ -133,7 +133,7 @@
         "tags": [
           "Transactions"
         ],
-        "summary": "Endpoint to import transactions from a xml file.",
+        "summary": "Endpoint to import transactions from a xls file.",
         "description": "",
         "consumes": [
           "multipart/form-data"
