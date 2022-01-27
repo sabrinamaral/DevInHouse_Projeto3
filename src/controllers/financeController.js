@@ -9,7 +9,7 @@ module.exports = {
     const users = await getJsonData("user.json");
     /* 
 #swagger.tags = ['Transactions']
-#swagger.summary = 'Endpoint to import transactions from a xml file.'
+#swagger.summary = 'Endpoint to import transactions from a xls file.'
 #swagger.consumes = ['multipart/form-data']  
     #swagger.parameters['file'] = {
         in: 'formData',
@@ -29,6 +29,24 @@ module.exports = {
         .status(404)
         .send({ success: false, message: `User doesn't exist.` });
     }
+    if (!req.file) {
+      return res.status(404).send({
+        success: false,
+        message: `You must provide a xls file to import.`,
+      });
+    }
+    const excelFile =
+      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+    const mimeType = req.file.mimetype;
+    const rightType = excelFile === mimeType;
+
+    if (!rightType) {
+      return res.status(400).send({
+        success: false,
+        message: `Please provide a xls file type to import.`,
+      });
+    }
+
     // otherwise get the buffer data from the file in req
     const xlsxBuffer = req.file.buffer;
 
