@@ -1,11 +1,7 @@
 [
-  { "userID": 1, "name": "Davi", "email": "davi@gmail.com" },
-  { "userID": 2, "name": "Ana", "email": "ana@gmail.com" },
-  { "userID": 3, "name": "Jenifer", "email": "jenifer@gmail.com" },
-  { "userID": 4, "name": "Douglas", "email": "douglas@gmail.com" },
-  { "userID": 5, "name": "Jonas", "email": "jonas@gmail.com" },
-  { "userID": 6, "name": "Maria", "email": "maria@gmail.com" },
-  { "userID": 7, "name": "Pedro", "email": "pedro@gmail.com" },
-  { "userID": 8, "name": "Sandy", "email": "sandy@gmail.com" },
-  { "userID": 9, "name": "Beatriz", "email": "beatriz@gmail.com" }
+  { "userID": 1, "name": "Roger", "email": "roger@gmail.com" },
+  { "userID": 2, "name": "Anna", "email": "anna@gmail.com" },
+  { "userID": 3, "name": "John", "email": "john@hotmail.com" },
+  { "userID": 4, "name": "Benjamin", "email": "benjamin@gmail.com" },
+  { "userID": 5, "name": "Sara", "email": "sara@hotmail.com" }
 ]
