@@ -2,17 +2,38 @@
   "swagger": "2.0",
   "info": {
     "version": "1.0.0",
-    "title": "REST API",
-    "description": ""
+    "title": "DEVinBank Pagamentos | Conta 365",
+    "description": "API developed to meet the third DevInHouse Project course requirements."
   },
   "host": "localhost:3000",
   "basePath": "/",
+  "tags": [
+    {
+      "name": "User",
+      "description": "Endpoints"
+    },
+    {
+      "name": "Transactions",
+      "description": "Endpoints"
+    }
+  ],
   "schemes": [
     "http"
+  ],
+  "consumes": [
+    "application/json",
+    "application/xml"
+  ],
+  "produces": [
+    "application/json"
   ],
   "paths": {
     "/api/user": {
       "post": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Endpoint to create an user.",
         "description": "",
         "parameters": [
           {
@@ -43,6 +64,10 @@
     },
     "/api/user/{id}": {
       "patch": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Endpoint to update an user.",
         "description": "",
         "parameters": [
           {
@@ -71,12 +96,19 @@
           "200": {
             "description": "OK"
           },
+          "400": {
+            "description": "Bad Request"
+          },
           "404": {
             "description": "Not Found"
           }
         }
       },
       "get": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Endpoint to look up an user.",
         "description": "",
         "parameters": [
           {
@@ -98,13 +130,27 @@
     },
     "/api/finance/{userID}": {
       "post": {
+        "tags": [
+          "Transactions"
+        ],
+        "summary": "Endpoint to import transactions from a xml file.",
         "description": "",
+        "consumes": [
+          "multipart/form-data"
+        ],
         "parameters": [
           {
             "name": "userID",
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "file",
+            "in": "formData",
+            "type": "file",
+            "required": true,
+            "description": "Upload your file here."
           }
         ],
         "responses": {
@@ -122,6 +168,10 @@
     },
     "/api/finance/{userID}/{entryID}": {
       "delete": {
+        "tags": [
+          "Transactions"
+        ],
+        "summary": "Endpoint to delete a transaction from a specific user.",
         "description": "",
         "parameters": [
           {

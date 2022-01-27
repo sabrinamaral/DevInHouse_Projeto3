@@ -7,6 +7,16 @@ module.exports = {
     // getting info from JSON
     const transactions = await getJsonData("finance.json");
     const users = await getJsonData("user.json");
+    /* 
+#swagger.tags = ['Transactions']
+#swagger.summary = 'Endpoint to import transactions from a xml file.'
+#swagger.consumes = ['multipart/form-data']  
+    #swagger.parameters['file'] = {
+        in: 'formData',
+        type: 'file',
+        required: 'true',
+        description: 'Upload your file here.'}
+*/
 
     // verifying if there is the user
     const existUser = users.find(
@@ -135,6 +145,11 @@ module.exports = {
     const users = await getJsonData("user.json");
     // get info from params
     const { userID, entryID } = req.params;
+
+    /* 
+    #swagger.tags = ['Transactions']
+    #swagger.summary = 'Endpoint to delete a transaction from a specific user.'
+    */
 
     // verifying if there is the user
     const existUser = users.find((user) => user.userID === Number(userID));
