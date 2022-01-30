@@ -22,35 +22,36 @@ The API has six endpoints. Three for users ans three for deal with the user's tr
 ```bash
 USERS
 
-# post 'users'
+# post
 endpoint: /api/user
-Endpoint to create user's information.
-You must provide a JSON in the body with name and email in it.
+"Endpoint to create user's information."
+Must be provided a JSON in the body with name and email.
 
-# patch 'users'
+# patch
 endpoint: /api/user/:id
-Endpoint to update user's information.
-You must provide a JSON in the body with name and email in it.
+"Endpoint to update user's information."
+Must be provided a JSON in the body with name and email.
 
-# get 'users'
+# get
 endpoint: /api/user/:id
-Endpoint to fetch the user's information.
+"Endpoint to fetch the user's information."
 
 TRANSACTIONS
 
 # post 'transactions'
 endpoint: /api/finance/:userID
-The endpoint post user's information by importing an excel worksheet.
+"The endpoint posts user's information by importing an excel worksheet."
 Must be provided a xls file with the columns: price, typeOfExpenses, date, name, in this exactly order.
 
 # get 'users'
 endpoint: /api/finance/:userID
-Endpoint to get the user's transactions and their total. It is also possible to filter by the year and typeOfExpenses through query.
+"Endpoint to get the user's transactions and their total."
+It is also possible to filter by the year and typeOfExpenses through query.
 
 # get 'users'
 endpoint: /api/finance/:userID/:entryID
-Endpoint to delete a transaction from a specific user.
-Must be provided the user's ID and the transaction's ID.
+"Endpoint to delete a transaction from a specific user."
+"Must be provided the user's ID and the transaction's ID.
 ```
 
 ## Languages
