@@ -6,7 +6,7 @@ It is a first version of a backend API that manage finance information.
 ## Installation
 
 For a first usage, you must install the package.json.
-Then, use the comand npm start to run the server.
+Then, use the command npm start to run the server.
 The port is 3333.
 
 ```bash
