@@ -1,7 +1,8 @@
 [
-  { "userID": 1, "name": "Roger", "email": "roger@gmail.com" },
+  { "userID": 1, "name": "Peter", "email": "peter@sunny.com" },
   { "userID": 2, "name": "Anna", "email": "anna@gmail.com" },
   { "userID": 3, "name": "John", "email": "john@hotmail.com" },
   { "userID": 4, "name": "Benjamin", "email": "benjamin@gmail.com" },
-  { "userID": 5, "name": "Sara", "email": "sara@hotmail.com" }
+  { "userID": 5, "name": "Sara", "email": "sara@hotmail.com" },
+  { "userID": 6, "name": "Sunny", "email": "sunny@sunny.com" }
 ]
