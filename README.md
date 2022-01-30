@@ -38,17 +38,17 @@ endpoint: /api/user/:id
 
 TRANSACTIONS
 
-# post 'transactions'
+# post
 endpoint: /api/finance/:userID
 "The endpoint posts user's information by importing an excel worksheet."
 Must be provided a xls file with the columns: price, typeOfExpenses, date, name, in this exactly order.
 
-# get 'users'
+# get
 endpoint: /api/finance/:userID
 "Endpoint to get the user's transactions and their total."
 It is also possible to filter by the year and typeOfExpenses through query.
 
-# get 'users'
+# delete
 endpoint: /api/finance/:userID/:entryID
 "Endpoint to delete a transaction from a specific user."
 "Must be provided the user's ID and the transaction's ID.
