@@ -11,9 +11,12 @@ financeRouter.post(
   upload.single("file"),
   financeController.importFromXLS
 );
+
 financeRouter.delete(
   "/finance/:userID/:entryID",
   financeController.deleteTransaction
 );
+
+financeRouter.get("/finance/:userID", financeController.totalTransactions);
 
 module.exports = financeRouter;
