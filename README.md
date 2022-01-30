@@ -64,12 +64,12 @@ Express
 
 ## Tools
 
-excel-date-to-js
-multer
-nodemon
-swagger
-swagger-autogen
-xlsx-populate
+- excel-date-to-js
+- multer
+- nodemon
+- swagger
+- swagger-autogen
+- xlsx-populate
 
 ## License
 
