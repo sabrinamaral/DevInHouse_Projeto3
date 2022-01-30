@@ -17,7 +17,7 @@ npm start
 
 ## Usage
 
-The API has six endpoints. Three for users ans three for deal with the user's transactions.
+The API has six endpoints. Three for users ans three for dealing with the user's transactions.
 
 ```bash
 USERS
