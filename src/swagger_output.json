@@ -5,7 +5,7 @@
     "title": "DEVinBank Pagamentos | Conta 365",
     "description": "API developed to meet the third DevInHouse Project course requirements."
   },
-  "host": "localhost:3000",
+  "host": "localhost:3333",
   "basePath": "/",
   "tags": [
     {
@@ -17,22 +17,13 @@
       "description": "Endpoints"
     }
   ],
-  "schemes": [
-    "http"
-  ],
-  "consumes": [
-    "application/json",
-    "application/xml"
-  ],
-  "produces": [
-    "application/json"
-  ],
+  "schemes": ["http"],
+  "consumes": ["application/json", "application/xml"],
+  "produces": ["application/json"],
   "paths": {
     "/api/user": {
       "post": {
-        "tags": [
-          "User"
-        ],
+        "tags": ["User"],
         "summary": "Endpoint to create an user.",
         "description": "",
         "parameters": [
@@ -64,9 +55,7 @@
     },
     "/api/user/{id}": {
       "patch": {
-        "tags": [
-          "User"
-        ],
+        "tags": ["User"],
         "summary": "Endpoint to update an user.",
         "description": "",
         "parameters": [
@@ -105,9 +94,7 @@
         }
       },
       "get": {
-        "tags": [
-          "User"
-        ],
+        "tags": ["User"],
         "summary": "Endpoint to look up an user.",
         "description": "",
         "parameters": [
@@ -130,14 +117,10 @@
     },
     "/api/finance/{userID}": {
       "post": {
-        "tags": [
-          "Transactions"
-        ],
+        "tags": ["Transactions"],
         "summary": "Endpoint to import transactions from a xls file.",
         "description": "",
-        "consumes": [
-          "multipart/form-data"
-        ],
+        "consumes": ["multipart/form-data"],
         "parameters": [
           {
             "name": "userID",
@@ -164,13 +147,42 @@
             "description": "Not Found"
           }
         }
+      },
+      "get": {
+        "tags": ["Transactions"],
+        "summary": "Endpoint to look up the user's transactions.",
+        "description": "Endpoint to get the user\\'s transactions and their total. It is also possible to filter by the year and typeOfExpenses through query.",
+        "parameters": [
+          {
+            "name": "userID",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "year",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
       }
     },
     "/api/finance/{userID}/{entryID}": {
       "delete": {
-        "tags": [
-          "Transactions"
-        ],
+        "tags": ["Transactions"],
         "summary": "Endpoint to delete a transaction from a specific user.",
         "description": "",
         "parameters": [

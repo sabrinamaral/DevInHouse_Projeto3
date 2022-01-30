@@ -10,7 +10,7 @@ const doc = {
     description:
       "API developed to meet the third DevInHouse Project course requirements.",
   },
-  host: "localhost:3000",
+  host: "localhost:3333",
   basePath: "/",
   schemes: ["http"],
   consumes: ["application/json", "application/xml"],
